@@ -9,13 +9,12 @@ jobs:
       - name: REUSE Compliance Check
         uses: fsfe/reuse-action@v1.1
   rust:
-    needs: reuse
     runs-on: ubuntu-latest
     steps:
       - name: Install components
         uses: actions-rs/toolchain@v1
         with:
-          profile: full
+          profile: complete
           toolchain: nightly
           components: clippy, rustfmt
           override: true
