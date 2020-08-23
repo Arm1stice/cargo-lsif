@@ -2,17 +2,20 @@ name: Linting
 on: [push, pull_request]
 
 jobs:
-  clippy:
+  reuse:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: REUSE Compliance Check
         uses: fsfe/reuse-action@v1.1
-      - name: Install Clippy
+  rust:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install components
         uses: actions-rs/toolchain@v1.0.6
         with:
           toolchain: nightly
-          components: clippy
+          components: clippy, rustfmt
           override: true
       - name: Run Clippy
         uses: actions-rs/clippy-check@v1.0.7
