@@ -10,13 +10,13 @@ jobs:
       uses: fsfe/reuse-action@v1
     - name: Install Clippy
       uses: actions-rs/toolchain@v1
-        with:
-          toolchain: nightly
-          components: clippy
-          override: true
+      with:
+        toolchain: nightly
+        components: clippy
+        override: true
     - name: Run Clippy
       uses: actions-rs/clippy-check@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          args: --all-features
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        args: --all-features
           
