@@ -1,0 +1,22 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: cargo-lsif
+Upstream-Contact: Wyatt Calandro <arm1stice@arm1stice.com>
+Source: https://github.com/Arm1stice/cargo-lsif
+
+# Sample paragraph, commented out:
+#
+# Files: src/*
+# Copyright: $YEAR $NAME <$CONTACT>
+# License: ...
+
+Files: README.md
+Copyright: 2020 Wyatt Calandro <arm1stice@arm1stice.com>
+License: Apache-2.0
+
+Files: .github/workflows/*
+Copyright: 2020 Wyatt Calandro <arm1stice@arm1stice.com>
+License: CC0-1.0
+
+Files: .gitignore
+Copyright: 2020 Wyatt Calandro <arm1stice@arm1stice.com>
+License: CC0-1.0
