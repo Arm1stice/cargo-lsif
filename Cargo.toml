@@ -1,4 +1,3 @@
-# SPDX-FileCopyrightText: 2020 Apache-2.0
 # SPDX-FileCopyrightText: 2020 Wyatt Calandro <arm1stice@arm1stice.com>
 #
 # SPDX-License-Identifier: Apache-2.0
@@ -11,4 +10,11 @@ edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
+[[bin]]
+name = "cargo-lsif"
+path = "src/bin/main.rs"
+
 [dependencies]
+anyhow = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+toml = "0.5.6"
